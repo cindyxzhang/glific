@@ -1,0 +1,38 @@
+2020-06-10 13:05:01.624 EDT [9887] LOG:  starting PostgreSQL 12.3 on x86_64-apple-darwin19.4.0, compiled by Apple clang version 11.0.3 (clang-1103.0.32.59), 64-bit
+2020-06-10 13:05:01.629 EDT [9887] LOG:  listening on IPv6 address "::1", port 5432
+2020-06-10 13:05:01.629 EDT [9887] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2020-06-10 13:05:01.630 EDT [9887] LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"
+2020-06-10 13:05:01.659 EDT [9888] LOG:  database system was shut down at 2020-06-10 13:02:26 EDT
+2020-06-10 13:05:01.665 EDT [9887] LOG:  database system is ready to accept connections
+2020-06-10 13:27:10.424 EDT [9986] FATAL:  role "postgres" does not exist
+2020-06-10 13:35:20.740 EDT [10097] FATAL:  database "cizhang" does not exist
+2020-06-10 13:36:35.963 EDT [10159] FATAL:  database "cizhang" does not exist
+2020-06-10 13:39:05.008 EDT [11356] FATAL:  role "postgres" does not exist
+2020-06-10 13:39:43.736 EDT [11362] FATAL:  database "cizhang" does not exist
+2020-06-10 13:44:30.133 EDT [12552] FATAL:  database "cizhang" does not exist
+2020-06-10 13:45:23.964 EDT [12573] FATAL:  role "postgresql" does not exist
+2020-06-10 18:10:16.737 EDT [14415] FATAL:  role "postgres" does not exist
+2020-06-10 18:13:50.376 EDT [14478] FATAL:  role "postgres" does not exist
+2020-06-10 18:14:01.567 EDT [14492] FATAL:  role "postgres" does not exist
+2020-06-10 18:17:00.530 EDT [14525] ERROR:  role "sde" does not exist
+2020-06-10 18:17:00.530 EDT [14525] STATEMENT:  ALTER USER sde PASSWORD 'md5b0bf8d6ab1923523f6496519171e5b6d'
+2020-06-10 18:17:55.017 EDT [14525] ERROR:  role "sde" does not exist
+2020-06-10 18:17:55.017 EDT [14525] STATEMENT:  ALTER USER sde PASSWORD 'md5b0bf8d6ab1923523f6496519171e5b6d'
+2020-06-10 21:49:23.472 EDT [17477] ERROR:  database "glific_dev" already exists
+2020-06-10 21:49:23.472 EDT [17477] STATEMENT:  CREATE DATABASE "glific_dev" ENCODING 'UTF8'
+2020-06-10 21:49:24.452 EDT [17487] ERROR:  duplicate key value violates unique constraint "languages_label_locale_index"
+2020-06-10 21:49:24.452 EDT [17487] DETAIL:  Key (label, locale)=(English (United States), en_US) already exists.
+2020-06-10 21:49:24.452 EDT [17487] STATEMENT:  INSERT INTO "languages" ("is_active","label","locale","inserted_at","updated_at") VALUES ($1,$2,$3,$4,$5) RETURNING "id"
+2020-06-10 22:54:18.043 EDT [18770] FATAL:  database "cizhang" does not exist
+2020-06-11 00:55:12.804 EDT [20222] ERROR:  database "glific_dev" already exists
+2020-06-11 00:55:12.804 EDT [20222] STATEMENT:  CREATE DATABASE "glific_dev" ENCODING 'UTF8'
+2020-06-11 00:55:14.669 EDT [20226] ERROR:  duplicate key value violates unique constraint "languages_label_locale_index"
+2020-06-11 00:55:14.669 EDT [20226] DETAIL:  Key (label, locale)=(English (United States), en_US) already exists.
+2020-06-11 00:55:14.669 EDT [20226] STATEMENT:  INSERT INTO "languages" ("is_active","label","locale","inserted_at","updated_at") VALUES ($1,$2,$3,$4,$5) RETURNING "id"
+2020-06-11 00:56:44.329 EDT [20332] ERROR:  duplicate key value violates unique constraint "languages_label_locale_index"
+2020-06-11 00:56:44.329 EDT [20332] DETAIL:  Key (label, locale)=(English (United States), en_US) already exists.
+2020-06-11 00:56:44.329 EDT [20332] STATEMENT:  INSERT INTO "languages" ("is_active","label","locale","inserted_at","updated_at") VALUES ($1,$2,$3,$4,$5) RETURNING "id"
+2020-06-11 02:44:49.899 EDT [9887] LOG:  received smart shutdown request
+2020-06-11 02:44:49.902 EDT [9887] LOG:  background worker "logical replication launcher" (PID 9894) exited with exit code 1
+2020-06-11 02:44:49.902 EDT [9889] LOG:  shutting down
+2020-06-11 02:44:49.913 EDT [9887] LOG:  database system is shut down

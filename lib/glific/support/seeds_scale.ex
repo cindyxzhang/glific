@@ -146,6 +146,21 @@ defmodule Glific.SeedsScale do
     Repo.insert_all(Contact, contact_entries)
   end
 
+  defp interleave_messages(beneficiary_messages, ngo_messages) do
+    #chunk into random sizes of 0 - 40 messages for list of messages to create pieces of conversation
+    chunked_beneficiary_messages = 
+      rand.uniform(40) 
+        |> ($Enum.chunk_every(beneficiary_messages, &1)).()
+    chunked_ngo_messages = 
+      rand.uniform(40) 
+        |> ($Enum.chunk_every(ngo_messages, &1)).()
+    #interleave in an array, alternating between beneficiary and ngo messages
+    interleaved_messages = 
+      Enum.zip(chunked_beneficiary_messages, chunked_ngo_messages) 
+      |> Enum.flat_map(fn {x,y} -> [x,y] end)
+
+  end
+
   defp seed_messages(messages_count) do
     # get all beneficiaries ids
     contact_ids =
@@ -189,9 +204,9 @@ defmodule Glific.SeedsScale do
     # create seed for deterministic random data
     :rand.seed(:exrop, {101, 102, 103})
 
-    seed_contacts(500)
+    seed_contacts(5)
 
-    seed_messages(10_000)
+    seed_messages(10)
 
     seed_message_tags()
 
